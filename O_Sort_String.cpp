@@ -5,22 +5,21 @@ int main()
 {
     int n;
     cin >> n;
-    char str[n];
-    cin.getline(str, n);
-    int i, j;
-    char temp;
-    for (i = 0; i < n - 1; i++)
+    int count[26] = {0};
+
+    for (int i = 0; i < n; i++)
     {
-        for (j = i + 1; j < n; j++)
-        {
-            if (str[i] > str[j])
-            {
-                temp = str[i];
-                str[i] = str[j];
-                str[j] = temp;
-            }
-        }
+        char str;
+        cin >> str;
+        count[int(str) - 97]++;
     }
 
+    for (int i = 0; i < 26; i++)
+    {
+        for (int j = 0; j < count[i]; j++)
+        {
+            cout << char(i + 97);
+        }
+    }
     return 0;
 }
