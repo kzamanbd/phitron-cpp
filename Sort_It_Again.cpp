@@ -12,16 +12,20 @@ public:
 
 bool compare(Student s1, Student s2)
 {
-    int total_s1 = s1.math_marks + s1.eng_marks;
-    int total_s2 = s2.math_marks + s2.eng_marks;
-
-    if (total_s1 > total_s2)
+    if (s1.eng_marks > s2.eng_marks)
     {
         return true;
     }
-    else if (total_s1 == total_s2)
+    else if (s1.eng_marks == s2.eng_marks)
     {
-        return s1.id < s2.id;
+        if (s1.math_marks > s2.math_marks)
+        {
+            return true;
+        }
+        else if (s1.math_marks == s2.math_marks)
+        {
+            return s1.id < s2.id;
+        }
     }
     return false;
 }
