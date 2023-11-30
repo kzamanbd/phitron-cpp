@@ -3,21 +3,20 @@ using namespace std;
 
 int main()
 {
-
-    string s;
-    cin >> s;
-
-    int count[26] = {0};
-    for (int i = 0; i < s.size(); i++)
+    char x;
+    vector<int> count(26, 0);
+    while (cin >> x)
     {
-        count[int(s[i] - 'a')]++;
+        count[int(x - 97)]++;
     }
-    for (int i = 0; i < 26; i++)
+
+    for (int i = 0; i < count.size(); i++)
     {
         if (count[i] > 0)
         {
-            cout << char(i + 'a') << " : " << count[i] << endl;
+            cout << char(i + 97) << " : " << count[i] << endl;
         }
     }
+
     return 0;
 }
