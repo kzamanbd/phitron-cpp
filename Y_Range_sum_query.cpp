@@ -4,23 +4,33 @@ using namespace std;
 int main()
 {
 
-    int n, q;
+    long long int n, q;
     cin >> n >> q;
-    vector<int> v(n);
+    long long int v[n];
 
     for (int i = 0; i < n; i++)
     {
         cin >> v[i];
+        if (i != 0)
+        {
+            v[i] += v[i - 1];
+        }
     }
 
-    for (int i = 0; i < q; i++)
+    while (q--)
     {
-        int x, y;
-        cin >> x >> y;
-        int sum = 0;
-        for (auto it = v.begin() + x - 1; it < v.begin() + y; it++)
+        long long int l, r;
+        cin >> l >> r;
+        l--;
+        r--;
+        long long int sum = 0;
+        if (l == 0)
         {
-            sum += *it;
+            sum = v[r];
+        }
+        else
+        {
+            sum = v[r] - v[l - 1];
         }
         cout << sum << endl;
     }
