@@ -1,0 +1,1 @@
+{"name":"Local: even_odd","url":"d:\\Application\\phitron-cpp\\even_odd.cpp","tests":[{"id":1701714128522,"input":"3\n100\n0\n1111","output":"even\neven\nodd"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Application\\phitron-cpp\\even_odd.cpp","group":"local","local":true}
