@@ -8,15 +8,10 @@ int main()
     cin >> testCase;
     while (testCase--)
     {
-        int x;
+        long long int x;
         cin >> x;
-        int last = x % 10;
-        while (x > 9)
-        {
-            x /= 10;
-        }
-        cout << "Sum = " << x + last << endl;
+        long long int square = sqrt(x);
+        cout >> x;
     }
-
     return 0;
 }

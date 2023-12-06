@@ -1,1 +1,0 @@
-{"name":"Local: small-to-large","url":"d:\\Application\\phitron-cpp\\dimik52\\small-to-large.cpp","tests":[{"id":1701717358164,"input":"3\n3 2 1\n1 2 3\n10 5 6","output":"Case 1: 1 2 3\nCase 2: 1 2 3\nCase 3: 5 6 10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Application\\phitron-cpp\\dimik52\\small-to-large.cpp","group":"local","local":true}
